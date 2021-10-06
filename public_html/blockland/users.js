@@ -18,21 +18,29 @@ class Users{
 
         socket.on('nicksave', (data)=>{
              userList.innerHTML = `
-             ${data.map(data => `<span>${data.nick}</span>`).join(',')}`
+             ${data.map(data => `<br>${data.nick}`).join(',')}`
               users = data;
-            // users.push(user)
-            
-            console.log("배열확인", users);
         })
 
         socket.on('deleteData', (delid) =>{
-
-             users = users.findIndex(users => users.id === delid)
-            // if(users !== -1)
-            console.log("일치", users);
+            for(let i = 0; i< users.length;i++){
+                if(users[i].id == delid.id){
+                    console.log("탈퇴유저:" ,users[i].id);
+                    users.splice(i, 1)
+                }
+            }
         })
-
     }
+
+//     getIdValue(id, users){
+//         for(let i=0;i<users.length;i++){
+//             if(users[i].id == id){
+//                 return true;
+//             }
+//         }
+
+//         return false;
+//     }
 
     
 

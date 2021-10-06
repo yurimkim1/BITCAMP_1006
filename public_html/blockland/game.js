@@ -167,27 +167,27 @@ class Game {
 			game.scene.add(textMesh)
 		});
 		
-		const startButton = document.getElementById('startButton'); //id값아 startButton 일 때
-		startButton.addEventListener('click', this.init); //버튼을 클릭하면 음악재생
+		// const startButton = document.getElementById('startButton'); //id값아 startButton 일 때
+		// startButton.addEventListener('click', this.init); //버튼을 클릭하면 음악재생
 
 		// const overlay = document.getElementById( 'overlay' );
 		// overlay.remove();
 
 		// 사운드1
-		const listener = new THREE.AudioListener();
-		this.camera.add(listener);
+		// const listener = new THREE.AudioListener();
+		// this.camera.add(listener);
 
-		// create a global audio source
-		const sound = new THREE.Audio(listener);
+		// // create a global audio source
+		// const sound = new THREE.Audio(listener);
 
-		// load a sound and set it as the Audio object's buffer
-		const audioLoader = new THREE.AudioLoader();
-		audioLoader.load('assets/sound/bensound-ukulele.mp3', function (buffer) {
-			sound.setBuffer(buffer);
-			sound.setLoop(true);
-			sound.setVolume(0.5);
-			sound.play();
-		});
+		// // load a sound and set it as the Audio object's buffer
+		// const audioLoader = new THREE.AudioLoader();
+		// audioLoader.load('assets/sound/bensound-ukulele.mp3', function (buffer) {
+		// 	sound.setBuffer(buffer);
+		// 	sound.setLoop(true);
+		// 	sound.setVolume(0.5);
+		// 	sound.play();
+		// });
 
 		// ground
 		const tLoader = new THREE.TextureLoader();

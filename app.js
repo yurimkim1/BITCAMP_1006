@@ -48,7 +48,7 @@ io.sockets.on('connection', function(socket){
 	
     socket.on('disconnect', function(){
 		socket.broadcast.emit('deletePlayer', { id: socket.id });//나를 제외한 전체에게 실시간 전송 // 특정 소켓 삭제
-		io.emit('deleteData',{id: socket.id});
+		io.emit('deleteData', {id: socket.id});
     });	
 	
 	socket.on('init', function(data){
